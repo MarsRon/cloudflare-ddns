@@ -44,6 +44,7 @@ def get_external_ip() -> str:
   """Get external IP address from Cloudflare trace and Amazon"""
   ipv4_re = r"(?:(?:25[0-5]|(?:2[0-4]|1\d|[1-9]|)\d)\.?\b){4}"
   res = requests.get("https://cloudflare.com/cdn-cgi/trace", timeout=10)
+  ip = None
 
   if res.status_code == 200:
     # https://stackoverflow.com/a/36760050/16259910
