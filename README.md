@@ -52,7 +52,7 @@ The following commands will install the script in `/usr/local/bin`.
 
 ```shell
 sudo chown root:root {cloudflare_ddns.py,cloudflare_ddns_config.json}
-mv {cloudflare_ddns.py,cloudflare_ddns_config.json} /usr/local/bin
+sudo mv {cloudflare_ddns.py,cloudflare_ddns_config.json} /usr/local/bin
 ```
 
 Setup a cron job (preferably in 1 hour intervals).
