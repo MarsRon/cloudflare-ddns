@@ -55,8 +55,12 @@ sudo chown root:root {cloudflare_ddns.py,cloudflare_ddns_config.json}
 sudo mv {cloudflare_ddns.py,cloudflare_ddns_config.json} /usr/local/bin
 ```
 
-Setup a cron job (preferably in 1 hour intervals).
+Setup a root user cron job (preferably in 1 hour intervals).
 [crontab.guru](https://crontab.guru) is a useful site for this.
+
+```shell
+sudo crontab -e
+```
 
 ```shell
 0 * * * * python3 /usr/local/bin/cloudflare_ddns.py /usr/local/bin/cloudflare_ddns_config.json
