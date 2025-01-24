@@ -43,9 +43,9 @@ except (json.decoder.JSONDecodeError, KeyError) as e:
 def get_external_ip() -> str:
   """Get external IP address from Cloudflare trace and Amazon"""
   ipv4_re = r"(?:(?:25[0-5]|(?:2[0-4]|1\d|[1-9]|)\d)\.?\b){4}"
-  res = requests.get("https://cloudflare.com/cdn-cgi/trace", timeout=10)
   ip = None
 
+  res = requests.get("https://cloudflare.com/cdn-cgi/trace", timeout=10)
   if res.status_code == 200:
     # https://stackoverflow.com/a/36760050/16259910
     re_match = re.search(f"^ip=({ipv4_re})$", res.text, re.MULTILINE)
@@ -56,7 +56,7 @@ def get_external_ip() -> str:
     # Cloudflare trace failed
     res = requests.get("https://checkip.amazonaws.com", timeout=10)
     if res.status_code == 200:
-      ip = res.text
+      ip = res.text.strip()
 
   if re.search(ipv4_re, ip) is None:
     raise ConnectionError(f"DDNS Updater: Cannot get external IPv4 address. The current IP address is {ip}")
