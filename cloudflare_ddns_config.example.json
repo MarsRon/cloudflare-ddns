@@ -1,0 +1,6 @@
+{
+  "DNS_RECORDS": ["example.com", "www.example.com"],
+  "CLOUDFLARE_ZONE_ID": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "CLOUDFLARE_ZONE_API_TOKEN": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "DISCORD_WEBHOOK_URL": "https://discord.com/api/webhooks/000000000000000000/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}
