@@ -63,8 +63,10 @@ sudo crontab -e
 ```
 
 ```shell
-0 * * * * python3 /usr/local/bin/cloudflare_ddns.py /usr/local/bin/cloudflare_ddns_config.json
+0 * * * * python3 /usr/local/bin/cloudflare_ddns.py /usr/local/bin/cloudflare_ddns_config.json 2>&1 | logger -t cloudflare_ddns
 ```
+
+Note that to prevent `No MTA installed, discarding output` logs, you have to append `2>&1 | logger -t xxxxxx` to the end of the cron entry to get logs in `/var/log/messages` and `/var/log/syslog`
 
 ## Configuration
 
