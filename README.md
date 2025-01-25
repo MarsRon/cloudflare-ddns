@@ -109,6 +109,7 @@ Leave empty "" if you do not want notifications.
 ## References
 
 - [fire1ce/DDNS-Cloudflare-Bash](https://github.com/fire1ce/DDNS-Cloudflare-Bash)
+- [K0p1-Git/cloudflare-ddns-updater](https://github.com/K0p1-Git/cloudflare-ddns-updater)
 
 ## License
 
